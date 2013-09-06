@@ -28,7 +28,7 @@ set -e
 case "$1" in
   start)
 	echo -n "Starting $DESC: "
-	start-stop-daemon --start --quiet --background --exec $DAEMON -- $DAEMON_OPTS
+	start-stop-daemon --start --chuid scribe --quiet --oknodo --background --exec $DAEMON -- $DAEMON_OPTS
 	echo "$NAME."
 	;;
   stop)
@@ -44,7 +44,7 @@ case "$1" in
     echo -n "Restarting $DESC: "
 	$SCRIBE_CTRL stop
 	sleep 1
-	start-stop-daemon --start --quiet --background --exec $DAEMON -- $DAEMON_OPTS
+	start-stop-daemon --start --chuid scribe --quiet --oknodo --background --exec $DAEMON -- $DAEMON_OPTS
 	echo "$NAME."
 	;;
   *)
