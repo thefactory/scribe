@@ -1,3 +1,9 @@
+scribe (2.2-betable2) precise; urgency=low
+
+  * Update the scribe_ctrl command
+
+ -- Betable Ops <ops@betable.com>  Tue, 9 Sep 2013 15:20:00 -0700
+
 scribe (2.2-betable1) precise; urgency=low
 
   * betable release
