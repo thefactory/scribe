@@ -40,6 +40,9 @@ case "$1" in
 	echo "Reloading $DESC configuration files."
 	$SCRIBE_CTRL reload
   	;;
+  status)
+	$SCRIBE_CTRL status
+	;;
   restart)
     echo -n "Restarting $DESC: "
 	$SCRIBE_CTRL stop
@@ -49,7 +52,7 @@ case "$1" in
 	;;
   *)
 	N=/etc/init.d/$NAME
-	echo "Usage: $N {start|stop|restart|reload}" >&2
+	echo "Usage: $N {start|stop|status|restart|reload}" >&2
 	exit 1
 	;;
 esac
