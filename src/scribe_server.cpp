@@ -86,6 +86,19 @@ string scribeHandler::resultCodeToString(ResultCode::type rc) {
   }
 }
 
+void sigusr1_reinitialize(int signum) {
+  if (g_Handler != NULL) {
+    g_Handler->reinitialize();
+  }
+}
+
+void sigterm_shutdown(int signum) {
+  if (g_Handler != NULL) {
+    g_Handler->shutdown();
+  }
+  exit(signum);
+}
+
 int main(int argc, char **argv) {
 
   try {
@@ -137,6 +150,9 @@ int main(int argc, char **argv) {
 
     g_Handler = shared_ptr<scribeHandler>(new scribeHandler(port, config_file));
     g_Handler->initialize();
+
+    signal(SIGTERM, sigterm_shutdown);
+    signal(SIGUSR1, sigusr1_reinitialize);
 
     scribe::startServer(); // never returns
 
