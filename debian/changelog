@@ -1,3 +1,9 @@
+scribe (2.2-betable4) precise; urgency=low
+
+  * Add support for SIGTERM and SIGUSR1
+
+ -- Betable Ops <ops@betable.com>  Wed, 18 Sep 2013 11:55:00 -0700
+
 scribe (2.2-betable3) precise; urgency=low
 
   * Update scribe_ctrl
