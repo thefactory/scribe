@@ -1,3 +1,9 @@
+scribe (2.2-thefactory1) precise; urgency=low
+
+  * Fixed up build deps
+
+ -- The Factory Ops <ops@thefactory.com>  Tue, 01 Apr 2014 09:45:00 -0700
+
 scribe (2.2-betable4) precise; urgency=low
 
   * Add support for SIGTERM and SIGUSR1
