@@ -61,6 +61,9 @@ endif
 if USE_TCMALLOC
   EXTERNAL_LIBS += -ltcmalloc
 endif
+if USE_JEMALLOC
+  EXTERNAL_LIBS += -ljemalloc
+endif
 if HAVE_LZO
   EXTERNAL_LIBS += -llzo2
 endif
@@ -89,7 +92,7 @@ AM_CPPFLAGS += $(FB_CPPFLAGS) $(DEBUG_CPPFLAGS)
 if STATIC
 lib_LIBRARIES = libscribe.a libdynamicbucketupdater.a
 libscribe_a_SOURCES = gen-cpp/scribe.cpp gen-cpp/scribe_types.cpp gen-cpp/scribe_constants.cpp
-libdynamicbucketupdater_a_SOURCES = gen-cpp/BucketStoreMapping.cpp gen-cpp/bucketupdater_constants.cpp gen-cpp/bucketupdater_types.cpp 
+libdynamicbucketupdater_a_SOURCES = gen-cpp/BucketStoreMapping.cpp gen-cpp/bucketupdater_constants.cpp gen-cpp/bucketupdater_types.cpp
 INTERNAL_LIBS = libscribe.a libdynamicbucketupdater.a
 endif
 

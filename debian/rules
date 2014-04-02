@@ -32,9 +32,9 @@ configure-stamp:
 	dh_testdir
 	# Add here commands to configure the package.
 	$(CURDIR)/bootstrap.sh
-	$(CURDIR)/configure --prefix=/usr --with-thriftpath=/usr --with-fb303path=/usr \
+	$(CURDIR)/configure --prefix=/usr --with-thriftpath=/usr --with-fb303path=/usr --enable-zookeeper --enable-jemalloc \
                             PY_PREFIX="/usr/local" \
-                            CPPFLAGS="-DHAVE_INTTYPES_H -DHAVE_NETINET_IN_H -DBOOST_FILESYSTEM_VERSION=2" LIBS="-lboost_system -lboost_filesystem" \
+                            CPPFLAGS="-I/usr/local/include/zookeeper -DHAVE_INTTYPES_H -DHAVE_NETINET_IN_H -DBOOST_FILESYSTEM_VERSION=2" LIBS="-lboost_system -lboost_filesystem" \
                             CFLAGS="$(CFLAGS)" LDFLAGS="$(LDFLAGS)" CXXFLAGS="$(CFLAGS)"
 
 build: build-stamp

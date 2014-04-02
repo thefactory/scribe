@@ -2,7 +2,7 @@ Source: scribe
 Section: net
 Priority: extra
 Maintainer: The Factory Ops <ops@thefactory.com>
-Build-Depends: debhelper (>= 5), autotools-dev, automake, libthrift-dev, libboost-dev (>= 1.40) | libboost1.48-all-dev, libboost-filesystem-dev (>= 1.40) | libboost-filesystem1.48-dev, thrift-compiler, python-fb303, libevent-dev, python, libcppunit-dev
+Build-Depends: debhelper (>= 5), autotools-dev, automake, libthrift-dev, libboost-dev (>= 1.40) | libboost1.48-all-dev, libboost-filesystem-dev (>= 1.40) | libboost-filesystem1.48-dev, thrift-compiler, python-fb303, libevent-dev, python, libcppunit-dev, libjemalloc-dev, libzookeeper-mt-dev
 Standards-Version: 3.8.4
 
 Package: scribe

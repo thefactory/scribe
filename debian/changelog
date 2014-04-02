@@ -1,3 +1,9 @@
+scribe (2.2-thefactory2) precise; urgency=low
+
+  * Added support for zookeeper and jemalloc.
+
+ -- The Factory Ops <ops@thefactory.com>  Wed, 02 Apr 2014 11:10:00 -0700
+
 scribe (2.2-thefactory1) precise; urgency=low
 
   * Fixed up build deps
