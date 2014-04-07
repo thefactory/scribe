@@ -1,3 +1,9 @@
+scribe (2.2-thefactory3) precise; urgency=low
+
+  * Added dep on libzookeeper-mt2
+
+ -- The Factory Ops <ops@thefactory.com>  Mon, 07 Apr 2014 15:44:00 -0700
+
 scribe (2.2-thefactory2) precise; urgency=low
 
   * Added support for zookeeper and jemalloc.
